@@ -1,0 +1,32 @@
+#include <iostream>
+#include <map>
+#include <string>
+
+using namespace std;
+
+int main() {
+    int q;
+    cin >> q;
+    map<string, int> marks_map;
+
+    for (int i = 0; i < q; i++) {
+        int type;
+        string name;
+        cin >> type >> name;
+
+        if (type == 1) {
+            int marks;
+            cin >> marks;
+            // Add marks to existing total or insert new entry
+            marks_map[name] += marks;
+        } else if (type == 2) {
+            // Erase the marks for the given student
+            marks_map.erase(name);
+        } else if (type == 3) {
+            // Print marks, or 0 if student not found
+            cout << marks_map[name] << endl;
+        }
+    }
+
+    return 0;
+}
