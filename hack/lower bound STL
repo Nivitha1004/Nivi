@@ -1,0 +1,24 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+int main() {
+    int n, q;
+    std::cin >> n;
+    std::vector<int> v(n);
+    for (int i = 0; i < n; i++) std::cin >> v[i];
+    
+    std::cin >> q;
+    while (q--) {
+        int val;
+        std::cin >> val;
+        auto low = std::lower_bound(v.begin(), v.end(), val);
+        
+        if (low != v.end() && *low == val) {
+            std::cout << "Yes " << (low - v.begin() + 1) << "\n";
+        } else {
+            std::cout << "No " << (low - v.begin() + 1) << "\n";
+        }
+    }
+    return 0;
+}
