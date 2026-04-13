@@ -1,0 +1,34 @@
+#include <iostream>
+#include <vector>
+
+int main() {
+    int n;
+    std::cin >> n;
+
+    std::vector<int> v(n);
+    for (int i = 0; i < n; i++) {
+        std::cin >> v[i];
+    }
+
+    // First query: Erase element at a specific position
+    int pos;
+    std::cin >> pos;
+    v.erase(v.begin() + (pos - 1));
+
+    // Second query: Erase elements in a range [start, end)
+    int start, end;
+    std::cin >> start >> end;
+    // We use (start-1) for the inclusive start and (end-1) for the exclusive end
+    v.erase(v.begin() + (start - 1), v.begin() + (end - 1));
+
+    // Output the size of the updated vector
+    std::cout << v.size() << std::endl;
+
+    // Output the remaining elements
+    for (int i = 0; i < v.size(); i++) {
+        std::cout << v[i] << (i == v.size() - 1 ? "" : " ");
+    }
+    std::cout << std::endl;
+
+    return 0;
+}
