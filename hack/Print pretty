@@ -1,0 +1,23 @@
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main() {
+    int T;
+    cin >> T;
+    while(T--) {
+        double A, B, C;
+        cin >> A >> B >> C;
+
+        // Line 1: Hexadecimal
+        cout << hex << left << showbase << nouppercase << (long long)A << endl;
+
+        // Line 2: Fixed precision with signs and padding
+        cout << right << setw(15) << setfill('_') << showpos << fixed << setprecision(2) << B << endl;
+
+        // Line 3: Scientific notation
+        cout << scientific << uppercase << noshowpos << setprecision(9) << C << endl;
+    }
+    return 0;
+}
