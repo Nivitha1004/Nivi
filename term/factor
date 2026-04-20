@@ -1,0 +1,10 @@
+def factor(a):
+   d=2
+   while(a>1):
+      if(a%d==0):
+         print (d)
+         a=a//d
+      else:
+         d=d+1
+a=int(input("Enter the number:"))
+factor(a)
