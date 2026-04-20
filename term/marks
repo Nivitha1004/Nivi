@@ -1,0 +1,21 @@
+a=int(input("Enter the first subject mark:"))
+b=int(input("Enter the second subject mark:"))
+c=int(input("Enter the third subject mark:"))
+d=int(input("Enter the fourth subject mark:"))
+e=int(input("Enter the fivth subject mark:"))
+avg=((a+b+c+d+e)/5)
+print("The average of the mark is:",avg)
+if(avg>90):
+   print("The student got O grade")
+elif(avg>=80 and avg<=89):
+   print("The student got A+ grade")
+elif(avg>+70 and avg<=79):
+   print("The student got A grade")
+elif(avg>=60 and avg<=69):
+   print("The student got B+ grade")
+elif(avg>=55 and avg<=59):
+   print("The student got B grade")
+elif(avg>=50 and avg<=54):
+   print("The student got C grade")
+else:
+   print("The student got failed")
