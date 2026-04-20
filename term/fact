@@ -1,0 +1,10 @@
+n=int(input("Enter the number"))
+fact=1
+c=1
+if(n==0):
+   print("The factorial of number is 1")
+else:
+   while(c<=n):
+      fact=fact*c
+      c=c+1
+print("The factorial is ",fact)
