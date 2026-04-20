@@ -1,0 +1,10 @@
+class track:
+   count=0
+   def __init__(self):
+      track.count+=1
+ob1=track()
+ob2=track()
+ob3=track()
+print ("Instances: ",track.count)
+[23bee014@mepcolinux ~]$python 10b.py
+('Instances: ', 3)
