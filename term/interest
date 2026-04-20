@@ -1,0 +1,10 @@
+p=float(input("Enetr the principle amount:"))
+r=int(input("Enetr the rate of intrest:"))
+t=float(input("Enter the time period:"))
+n=int(input("Enter the compounding time:"))
+si=((p*r*t)/100)
+print("The simple intrest is:",si)
+x=1+((r*t)/100)
+a=float(p*(x**(n*t)))
+ci=a-p
+print("the compound intrest is:",ci)
