@@ -1,0 +1,31 @@
+i="y"
+while [ $i = "y" ]
+do
+   echo "enter your basic:"
+   read basic
+   echo "pay slip details:"
+   echo "1.House rent allowance:"
+   echo "2.Dearness allowance:"
+   echo "3.Provident fund:"
+   echo "enter your choice:"
+   read ch
+   case $ch in
+      1)hra=`expr $basic \* 20 / 100`
+         echo your HRA is Rs. $hra
+         ;;
+      2)da=`expr $basic \* 40 / 100`
+         echo your DA is Rs. $da
+         ;;
+      3)pf=`expr $basic \* 10 / 100`
+         echo ypur PF is Rs. $pf
+         ;;
+      *)echo "not a valid choice"
+         ;;
+   esac
+   echo "do you want to continue?:"
+   read i
+   if [ $i ! = "y" ]
+   then
+      exit
+   fi
+done
