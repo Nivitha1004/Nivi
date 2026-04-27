@@ -1,0 +1,12 @@
+echo "enter first number"
+read no
+echo "enter the number of power:"
+read power
+counter=0
+ans=1
+while [ $power -ne $counter ]
+do
+   ans=`expr $ans \* $no`
+   counter=`expr $counter + 1`
+done
+echo "$no power of $power is: $ans"
